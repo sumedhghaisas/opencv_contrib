@@ -1,5 +1,6 @@
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${CMAKE_CURRENT_SOURCE_DIR})
 
+
 find_package(Tesseract)
 if(Tesseract_FOUND)
     message(STATUS "Tesseract:   YES")
