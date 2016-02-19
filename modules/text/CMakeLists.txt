@@ -1,7 +1,7 @@
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${CMAKE_CURRENT_SOURCE_DIR})
 
-hunter_add_package(tesseract)
 find_package(tesseract CONFIG REQUIRED)
+set(HAVE_TESSERACT 1)
 
 configure_file(${CMAKE_CURRENT_SOURCE_DIR}/text_config.hpp.in
                ${CMAKE_BINARY_DIR}/text_config.hpp @ONLY)

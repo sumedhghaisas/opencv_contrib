@@ -40,6 +40,8 @@
 //
 //M*/
 
+#define NOMINMAX
+
 #include "precomp.hpp"
 #include "opencv2/imgproc.hpp"
 #include "opencv2/ml.hpp"
@@ -1407,7 +1409,7 @@ static double NFA(int n, int k, double p, double logNT)
     int i;
 
     if (p<=0)
-        p = std::numeric_limits<double>::min();
+        p = (std::numeric_limits<double>::min)();
     if (p>=1)
         p = 1 - std::numeric_limits<double>::epsilon();
 
